@@ -233,12 +233,12 @@ pre-commit run --all-files
 
 1. **Review the example**: `examples/conversion_prediction.py`
 2. **Read the documentation**:
-   - [ADDING_CUSTOM_MODELS.md](/ADDING_CUSTOM_MODELS.md)
-3. **Extend the framework**: See extension examples in [ADDING_CUSTOM_MODELS.md](/ADDING_CUSTOM_MODELS.md)
+   - [ADDING_CUSTOM_MODELS.md](ADDING_CUSTOM_MODELS.md)
+3. **Extend the framework**: See extension examples in [ADDING_CUSTOM_MODELS.md](ADDING_CUSTOM_MODELS.md)
 
 ---
 
 ## Questions?
-- Check [ADDING_CUSTOM_MODELS.md](/ADDING_CUSTOM_MODELS.md) for extending the framework
-- Check [examples/](./examples/) for usage examples
+- Check [ADDING_CUSTOM_MODELS.md](ADDING_CUSTOM_MODELS.md) for extending the framework
+- Check [examples/](../examples/) for usage examples
 

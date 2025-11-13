@@ -186,8 +186,8 @@ ml-framework/
 
 ##  Documentation
 
-- **[QUICK_START.md](./QUICK_START.md)**: Quick start guide with installation and usage examples
-- **[ADDING_CUSTOM_MODELS.md](/ADDING_CUSTOM_MODELS.md)**: Guide for extending the framework with custom models
+- **[QUICK_START.md](QUICK_START.md)**: Quick start guide with installation and usage examples
+- **[ADDING_CUSTOM_MODELS.md](ADDING_CUSTOM_MODELS.md)**: Guide for extending the framework with custom models
 
 ---
 
