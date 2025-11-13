@@ -6,8 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile.git
       args:
-        GIT_REPO_URL: https://github.com/hasnainkothawala/foundry.git
-        GIT_BRANCH: master
+        GIT_REPO_URL: https://github.com/hasnainkothawala/cautious-giggle.git
+        GIT_BRANCH: main
     container_name: ml-framework-git
     volumes:
       # Mount assignment data (if available locally, otherwise will need to be in repo)

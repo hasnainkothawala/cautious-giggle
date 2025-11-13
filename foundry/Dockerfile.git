@@ -19,12 +19,12 @@ RUN apt-get update && apt-get install -y \
 RUN pip install --no-cache-dir uv
 
 # Clone the repository
-ARG GIT_REPO_URL=https://github.com/hasnainkothawala/foundry.git
-ARG GIT_BRANCH=master
+ARG GIT_REPO_URL=https://github.com/hasnainkothawala/cautious-giggle.git
+ARG GIT_BRANCH=main
 
 RUN git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app
 
-# Project is in /app/foundry/ after cloning
+# Project is in /app/foundry/ after cloning (foundry is a subdirectory in the repo)
 WORKDIR /app/foundry
 
 # Install dependencies and package using UV (--system flag for Docker)
