@@ -1,0 +1,11 @@
+# ML Framework - Production Dependencies
+# Python 3.12+
+
+pandas
+numpy
+scikit-learn
+pydantic
+pyyaml
+python-dotenv
+joblib
+click

@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  ml-framework-git:
+    build:
+      context: .
+      dockerfile: Dockerfile.git
+      args:
+        GIT_REPO_URL: https://github.com/hasnainkothawala/foundry.git
+        GIT_BRANCH: master
+    container_name: ml-framework-git
+    volumes:
+      # Mount assignment data (if available locally, otherwise will need to be in repo)
+      - ./assignment:/app/assignment:ro
+      # Mount artifacts directory (to persist outputs)
+      - ./artifacts:/app/artifacts
+      - ./experiments:/app/experiments
+    working_dir: /app/foundry
+    # Override command to run different examples (if they exist)
+    command: sh -c "python examples/conversion_prediction.py"
+    environment:
+      - PYTHONUNBUFFERED=1
+

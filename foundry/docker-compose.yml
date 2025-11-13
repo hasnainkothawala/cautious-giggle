@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  ml-framework:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ml-framework
+    volumes:
+      # Mount assignment data
+      - ./assignment:/app/assignment:ro
+      # Mount artifacts directory (to persist outputs)
+      - ./artifacts:/app/artifacts
+      - ./experiments:/app/experiments
+    working_dir: /app
+    # Override command to run different examples
+    # Default: conversion_prediction.py
+    command: python examples/conversion_prediction.py
+    environment:
+      - PYTHONUNBUFFERED=1
+

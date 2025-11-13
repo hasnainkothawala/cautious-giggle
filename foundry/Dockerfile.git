@@ -1,0 +1,39 @@
+# Dockerfile for testing package installation from GitHub
+# This builds an image by cloning from git and installing the package using UV
+
+FROM python:3.12-slim
+
+# Set working directory
+WORKDIR /app
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1
+
+# Install system dependencies (git for cloning)
+RUN apt-get update && apt-get install -y \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install UV using pip
+RUN pip install --no-cache-dir uv
+
+# Clone the repository
+ARG GIT_REPO_URL=https://github.com/hasnainkothawala/foundry.git
+ARG GIT_BRANCH=master
+
+RUN git clone --depth 1 --branch ${GIT_BRANCH} ${GIT_REPO_URL} /app
+
+# Project is in /app/foundry/ after cloning
+WORKDIR /app/foundry
+
+# Install dependencies and package using UV (--system flag for Docker)
+RUN uv pip install --system -e .
+
+# Verify installation (check that package directory exists and is installed)
+RUN python -c "import sys; print('Python path:', sys.path)" && \
+    ls -la /usr/local/lib/python3.12/site-packages/ | grep ml-framework || \
+    echo "Package installed in editable mode"
+
+# Set default command
+CMD ["python", "examples/conversion_prediction.py"]

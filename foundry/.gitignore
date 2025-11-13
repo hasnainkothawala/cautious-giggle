@@ -1,0 +1,83 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# Poetry
+poetry.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+
+# Artifacts
+
+experiments/
+*.pkl
+*.joblib
+*.h5
+*.ckpt
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+
+/assignment/assignment-requirments.txt.txt
+/assignment/assignment.pdf
+/artifacts/conversion_prediction/v1.0.0-20251108-8e7b3d31/config.json
+/artifacts/conversion_prediction/v1.0.0-20251108-8e7b3d31/metrics.json
+/artifacts/conversion_prediction/v1.0.0-20251110-09a3efab/config.json
+/artifacts/conversion_prediction/v1.0.0-20251110-09a3efab/metrics.json
+/artifacts/conversion_prediction/v1.0.0-20251112-a6dbf53b/config.json
+/artifacts/conversion_prediction/v1.0.0-20251112-a6dbf53b/metrics.json
+/examples/artifacts/conversion_prediction/v1.0.0-20251108-8acaf224/config.json
+/examples/artifacts/conversion_prediction/v1.0.0-20251108-8acaf224/metrics.json
+/examples/artifacts/conversion_prediction/v1.0.0-20251113-dcec0cfa/config.json
+/examples/artifacts/conversion_prediction/v1.0.0-20251113-dcec0cfa/metrics.json
+/documentation/SOLUTION_BLUEPRINT.md
+/documentation/SOLUTION_BLUEPRINT.md

@@ -1,0 +1,18 @@
+# ML Framework - Development Dependencies
+# Python 3.12+
+#
+# Install with: pip install -r requirements.txt -r requirements-dev.txt
+# Or: pip install -r requirements-dev.txt (includes production deps)
+
+# Production dependencies
+-r requirements.txt
+
+# Development dependencies
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+pytest-cov>=4.1.0
+black>=24.0.0
+ruff>=0.1.0
+mypy>=1.8.0
+pre-commit>=3.0.0
+
